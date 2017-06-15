@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        document.write("<h1>This is a heading</h1>");
+        document.write("<p>This is a paragraph.</p>");
+        function changeInnerHTML() {
+            x = document.getElementById("demo");
+            x.innerHTML = "Hello JavaScript!";
+        }
+    </script>
+
+    <button type="button" onclick="alert('Welcome!')">点击这里</button>
+    <button type="button" onclick="changeInnerHTML()">changeInnerHTML</button>
+    <p id="demo">
+        JavaScript能改变HTML元素的内容
+    </p>
+</body>
+
+</html>
