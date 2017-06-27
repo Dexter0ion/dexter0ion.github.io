@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/mazeStyle.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="control">
+        控制栏</br>
+        <label>input row:<input type="number" name="row" id="row"></label>
+        <label>input col:<input type="number" name="col" id="col"></label>
+        <input type="button" value="GenerateMazeLog" id="generateMazeLog">
+    </div>
+
+    <div class="mazeblock">
+    <canvas width=300 height=300 id="canvas"></canvas>
+    </div>
+<p id="logInfo">logInfo
+    <div class="msgblock">
+        <p>测试信息标签</p>
+        <p id="logInfo">logInfo
+        </p>
+    </div>
+    <script src="js/mazeScript.js"></script>
+</body>
+</html>
