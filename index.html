@@ -27,7 +27,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">UDP-Server</a>
+      <a class="navbar-brand" href="about.html">UDP-Server-制作人</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,9 +36,6 @@
         <li><a href="about.html">About</a></li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-      </ul>
     </div>
   </div>
 </nav>
@@ -57,6 +54,17 @@
             <input type="text" class="form-control" id="tbxChatMsg">
             <span class="input-group-btn">
       <button class="btn btn-default" type="button"id="btnConnectStart">发送</button>
+
+      <script>
+        var tbxChatMsg = document.getElementById("tbxChatMsg");
+    var oBtn = document.getElementById('btnConnectStart');
+    var chatBoardMsg = document.getElementById("chatBoard");
+    oBtn.onclick = function(){ 
+        var msg = tbxChatMsg.value;
+      chatBoardMsg.innerHTML += "Server:" + msg + "</br>";
+    };
+    oBtn.click();  //模拟点击事件，页面刷新，出发点击事件
+</script>
     </span>
         </div>
     </div>
@@ -73,7 +81,7 @@
   </p>
   <p><a class="btn btn-primary btn-lg">Github</a></p>
 </div>
-    <script src="js/serverSocket.js"></script>
+   
 </body>
 
 </html>
