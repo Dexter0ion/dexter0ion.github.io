@@ -22,6 +22,8 @@ function ab2str(buf) {
 }
 //前端向都唔起发送消息
 function serverSendMsg() {
+    var msg = tbxChatMsg.value;
+    chatBoardMsg.innerHTML += "Server:" + msg + "</br>";
     var socket = io.connect();//与服务器进行连接
     var msg = tbxChatMsg.value;
     socket.emit('foo', msg);
