@@ -53,16 +53,37 @@
       <span class="input-group-addon">$</span>
       <input type="text" class="form-control" id="tbxChatMsg">
       <span class="input-group-btn">
-      <button class="btn btn-default" type="button"id="btnConnectStart">发送</button>
+      <button class="btn btn-default" type="button"id="btnEnter">发送</button>
 <audio id="bgaudio" src="poi.wav" ></audio>
-      <script>
-        
+    </span>
+    </div>
+  </div>
 
-		
+  <a href="#" class="btn btn-default btn-lg btn-block" id="btnStartConnect">开始连接</a>
+
+  <div class="progress progress-striped active">
+    <div id="progressbar" class="progress-bar"></div>
+  </div>
+  <div class="jumbotron">
+    <h1>
+      <class="jumtitle">基于nodejs与udp协议的消息通信系统</h1>
+    <p>
+      <id="jumtext">
+        本web端程序基于nodejs框架与udp通信协议,点击按钮进入github查看源代码
+    </p>
+    <p><a class="btn btn-primary btn-lg">Github</a></p>
+  </div>
+
+      <script>
+
+
+
 
         var tbxChatMsg = document.getElementById("tbxChatMsg");
-        var oBtn = document.getElementById('btnConnectStart');
+        var oBtn = document.getElementById('btnEnter');
+        var btnStartConnect =document.getElementById('btnStartConnect');
         var chatBoardMsg = document.getElementById("chatBoard");
+        var progress =document.getElementById("progressbar");
         oBtn.onclick = function () {
           var msg = tbxChatMsg.value;
           chatBoardMsg.innerHTML += "Server:" + msg + "</br>";
@@ -71,6 +92,10 @@
           
           vibrate();
         };
+
+        btnStartConnect.onclick =function(){
+          progressBarChange();
+        }
 
 
         function randomMachine() {
@@ -89,34 +114,19 @@
           */
           document.getElementById('bgaudio').play();
         }
-
+        function progressBarChange() {
+          progressbar.style.width = "100%";
+        }
         function vibrate(u) {
           var a = ['top', 'left'], b = 0;
           u = setInterval(function () {
             document.getElementById('chatBoard').style[a[b % 2]] = (b++) % 4 < 2 ? 0 : 4;
             if (b > 15) { clearInterval(u); b = 0 }
           }, 32)
+
+
         } 
       </script>
-    </span>
-    </div>
-  </div>
-
-  <a href="#" class="btn btn-default btn-lg btn-block">开始连接</a>
-
-  <div class="progress progress-striped active">
-    <div class="progress-bar" style="width: 45%"></div>
-  </div>
-  <div class="jumbotron">
-    <h1>
-      <class="jumtitle">基于nodejs与udp协议的消息通信系统</h1>
-    <p>
-      <id="jumtext">
-        本web端程序基于nodejs框架与udp通信协议,点击按钮进入github查看源代码
-    </p>
-    <p><a class="btn btn-primary btn-lg">Github</a></p>
-  </div>
-
 </body>
 
 </html>
