@@ -62,8 +62,9 @@
         oBtn.onclick = function () {
           var msg = tbxChatMsg.value;
           chatBoardMsg.innerHTML += "Server:" + msg + "</br>";
-          randomMachine();
           playSound();
+          randomMachine();
+          
           vibrate();
         };
 
