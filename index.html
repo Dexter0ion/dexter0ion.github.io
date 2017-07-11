@@ -2,86 +2,113 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
     , initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="http://localhost:8081/socket.io/socket.io.js"></script>
-    <link rel="stylesheet" href="css/styleServer.css">
-     <!-- Required for non-UTF encodings -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="http://localhost:8081/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" href="css/styleServer.css">
+  <!-- Required for non-UTF encodings -->
   <script src="encoding-indexes.js"></script>
   <script src="encoding.js"></script>
-    <title>Document</title>
+  <title>Document</title>
 </head>
 
 <body>
-    
 
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="about.html">UDP-Server-制作人</a>
+        <a class="navbar-brand" href="about.html">UDP-Server-制作人</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">MainPage <span class="sr-only">(current)</span></a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+      </div>
     </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">MainPage <span class="sr-only">(current)</span></a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-
+  </nav>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2 class="panel-title">Chat Board</h2>
+    </div>
+    <div id="chatBoard" class="panel-body">
     </div>
   </div>
-</nav>
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h2 class="panel-title">Chat Board</h2>
-        </div>
-        <div id="chatBoard" class="panel-body">
-        </div>
-    </div>
 
-    <div class="form-group">
-        <label class="control-label">输入消息</label>
-        <div class="input-group">
-            <span class="input-group-addon">$</span>
-            <input type="text" class="form-control" id="tbxChatMsg">
-            <span class="input-group-btn">
+  <div class="form-group">
+    <label class="control-label">输入消息</label>
+    <div class="input-group">
+      <span class="input-group-addon">$</span>
+      <input type="text" class="form-control" id="tbxChatMsg">
+      <span class="input-group-btn">
       <button class="btn btn-default" type="button"id="btnConnectStart">发送</button>
 
       <script>
         var tbxChatMsg = document.getElementById("tbxChatMsg");
-    var oBtn = document.getElementById('btnConnectStart');
-    var chatBoardMsg = document.getElementById("chatBoard");
-    oBtn.onclick = function(){ 
-        var msg = tbxChatMsg.value;
-      chatBoardMsg.innerHTML += "Server:" + msg + "</br>";
-    };
-    oBtn.click();  //模拟点击事件，页面刷新，出发点击事件
-</script>
+        var oBtn = document.getElementById('btnConnectStart');
+        var chatBoardMsg = document.getElementById("chatBoard");
+        oBtn.onclick = function () {
+          var msg = tbxChatMsg.value;
+          chatBoardMsg.innerHTML += "Server:" + msg + "</br>";
+          randomMachine();
+          playSound();
+          vibrate();
+        };
+
+
+        function randomMachine() {
+          var msgMachine = new Array("叽", "喵", "你真可爱", " o(*≧▽≦)ツ", "今天天气真好呢(*´∇｀*) ");
+          var msgRandomNum = Math.round(Math.random() * 4);
+
+          var mioMsg = msgMachine[msgRandomNum];
+          chatBoardMsg.innerHTML += "mio~:" + mioMsg + "</br>";
+        }
+
+        function playSound() {
+          var audio = document.createElement("audio");
+          audio.src = "poi.wav";
+          audio.play();
+        }
+
+        function vibrate(u) {
+          var a = ['top', 'left'], b = 0;
+          u = setInterval(function () {
+            document.getElementById('chatBoard').style[a[b % 2]] = (b++) % 4 < 2 ? 0 : 4;
+            if (b > 15) { clearInterval(u); b = 0 }
+          }, 32)
+        } 
+      </script>
     </span>
-        </div>
     </div>
+  </div>
 
-    <a href="#" class="btn btn-default btn-lg btn-block" >开始连接</a>
+  <a href="#" class="btn btn-default btn-lg btn-block">开始连接</a>
 
-    <div class="progress progress-striped active">
-  <div class="progress-bar" style="width: 45%"></div>
-</div>
-<div class="jumbotron">
-  <h1><class="jumtitle">基于nodejs与udp协议的消息通信系统</h1>
-  <p><id="jumtext">
-      本web端程序基于nodejs框架与udp通信协议,点击按钮进入github查看源代码
-  </p>
-  <p><a class="btn btn-primary btn-lg">Github</a></p>
-</div>
-   
+  <div class="progress progress-striped active">
+    <div class="progress-bar" style="width: 45%"></div>
+  </div>
+  <div class="jumbotron">
+    <h1>
+      <class="jumtitle">基于nodejs与udp协议的消息通信系统</h1>
+    <p>
+      <id="jumtext">
+        本web端程序基于nodejs框架与udp通信协议,点击按钮进入github查看源代码
+    </p>
+    <p><a class="btn btn-primary btn-lg">Github</a></p>
+  </div>
+
 </body>
 
 </html>
