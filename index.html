@@ -54,8 +54,12 @@
       <input type="text" class="form-control" id="tbxChatMsg">
       <span class="input-group-btn">
       <button class="btn btn-default" type="button"id="btnConnectStart">发送</button>
-
+<audio id="bgaudio" src="poi.wav" ></audio>
       <script>
+        
+
+		
+
         var tbxChatMsg = document.getElementById("tbxChatMsg");
         var oBtn = document.getElementById('btnConnectStart');
         var chatBoardMsg = document.getElementById("chatBoard");
@@ -78,9 +82,12 @@
         }
 
         function playSound() {
+          /*
           var audio = document.createElement("audio");
           audio.src = "poi.wav";
           audio.play();
+          */
+          document.getElementById('bgaudio').play();
         }
 
         function vibrate(u) {
