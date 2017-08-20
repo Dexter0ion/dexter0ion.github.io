@@ -49,19 +49,19 @@
 
 .heart {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 .heart::before,
 .heart::after {
     position: absolute;
     content: "";
-    left: 200px;
+    left: 100px;
     top: 50px;
-    width: 200px;
-    height: 300px;
+    width: 100px;
+    height: 160px;
     background:pink;
-    border-radius: 200px 200px 0 0  ;
+    border-radius: 180px 180px 0 0  ;
     transform: rotate(-45deg);
     transform-origin: 0 100%;
 }
