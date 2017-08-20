@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/draw.css">
+    <link rel="stylesheet" href="css/bootstyle.css">
+    <script type="text/javascript" src="js/daycount.js"></script>
+    <title>Document</title>
+
+    
+</head>
+
+<body onload="dateShow();">
+    <div class="alert alert-dismissible alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>喜欢你❤ 喜欢和你一起的日日夜夜</strong>
+    </div>
+    <div class="heart" style="padding:100px">
+
+    </div>
+
+
+    <div class="panel panel-info" >
+        <div class="panel-heading">
+            <h3 class="panel-title">亲爱的佳宝贝~</h3>
+        </div>
+        <div class="panel-body" id="panel-body" style="color: pink">
+
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+        var panelBody = document.getElementById("panel-body");
+        dataShow();
+        function dataShow() {
+            startDate = "2016-12-5";
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var day = date.getDate();
+            var seperator = "-";
+            var currentDate = year + seperator + month + seperator + day;
+            var diffDate = DateDiff(startDate, currentDate);
+            panelBody.innerHTML = "我们在一起"+diffDate+'天了❤ </br>我爱你❤' 
+        }
+
+        //计算天数差的函数，通用  
+        function DateDiff(sDate1, sDate2) {    //sDate1和sDate2是2002-12-18格式  
+            var aDate, oDate1, oDate2, iDays;
+            aDate = sDate1.split("-");
+            oDate1 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0])    //转换为12-18-2002格式  
+            aDate = sDate2.split("-");
+            oDate2 = new Date(aDate[1] + '-' + aDate[2] + '-' + aDate[0]);
+            iDays = parseInt(Math.abs(oDate1 - oDate2) / 1000 / 60 / 60 / 24);  //把相差的毫秒数转换为天数  
+            return iDays;
+        }
+    </script>
+</html>
