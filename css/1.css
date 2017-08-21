@@ -1,0 +1,80 @@
+#poi{
+	margin: auto;
+	height: 1120px;
+	width: 800px;
+	background-color: gainsboro;
+}
+#poi h1{
+	text-align: center;
+	padding-top: 20px;
+}
+.form-group{
+	margin: auto;
+	width: 600px;
+	height: 100px;
+}
+.zxc{
+	margin-top: 20px;
+	margin-left: 90px;
+	float: left;
+	font: "微软雅黑";
+	font-size: 24px;
+}
+.form-control{
+	border:none;
+	width: 300px;
+	height: 50px;
+}
+.qwe{
+	border: 1px solid black;
+	height:52px;
+	width: 300px;
+	float: left;
+	margin-left: 120px;
+	border-radius: 5px;
+}
+.sdf{
+	border: 1px solid blue;
+	height:52px;
+	width: 300px;
+}
+.qwe1{
+	border: 1px solid black;
+	height:52px;
+	width: 300px;
+	float: left;
+	margin-left: 135px;
+	border-radius: 5px;
+}
+.kjh{
+	margin-left: 300px;
+	padding-top: 20px;
+	font-size: 24px;
+}
+.vcb{
+	margin-left: 300px;
+	font-size: 24px;	
+}
+.qwe2{
+	margin-top: -25px;
+	border: 1px solid black;
+	height:150px;
+	width: 400px;
+	float: left;
+	margin-left: 250px;
+	border-radius: 5px;
+}
+#lop{
+	width: 400px;
+	height: 50px;
+	padding-top: 140px;
+	margin-left: 250px;
+}
+#lop h1{
+	margin-top: -10px;
+}
+.lkj{
+	height: 60px;
+	width: 80px;
+	
+}
