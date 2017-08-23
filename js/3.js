@@ -43,3 +43,15 @@ function ou()
 	c.style.backgroundColor="white";
 	c.style.color="black";
 }
+function openWindow()
+{
+   	var click=confirm("确定要提交吗？");
+   	if(click==true)
+   	{
+   		alert("提交成功");
+   	}
+   	else
+   	{
+   			alert("再填一遍")
+   	}
+}

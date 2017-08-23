@@ -1,36 +1,50 @@
 #poi{
 	margin: auto;
-	height: 1120px;
-	width: 800px;
-	background-color: gainsboro;
+	height: 1468px;
+	width:1000px;
+	background:url(../img/5.jpg);
 }
 #poi h1{
-	text-align: center;
-	padding-top: 20px;
+	margin-left: 410px;
+	padding-top: 210px;
+	font-size: 48px;
 }
 .form-group{
 	margin: auto;
 	width: 600px;
-	height: 100px;
+	height: 65px;
 }
 .zxc{
-	margin-top: 20px;
-	margin-left: 90px;
+	margin-top: 10px;
+	margin-left: 160px;
 	float: left;
 	font: "微软雅黑";
-	font-size: 24px;
+	font-size: 16px;
 }
 .form-control{
-	border:none;
 	width: 300px;
 	height: 50px;
 }
+.nji{
+	font-size: 16px;
+	margin-left: 30px;
+}
+.nji1{
+	margin-top: 10px;
+	font-size: 16px;
+	margin-left: 90px;
+}
+.vcb{
+	font-size: 16px;
+	margin-top: 5px;
+	margin-left: 95px;
+}
 .qwe{
 	border: 1px solid black;
-	height:52px;
-	width: 300px;
+	height:30px;
+	width: 150px;
 	float: left;
-	margin-left: 120px;
+	margin-left: 80px;
 	border-radius: 5px;
 }
 .sdf{
@@ -40,41 +54,23 @@
 }
 .qwe1{
 	border: 1px solid black;
-	height:52px;
-	width: 300px;
+	height:30px;
+	width: 150px;
 	float: left;
-	margin-left: 135px;
+	margin-left: 88px;
 	border-radius: 5px;
-}
-.kjh{
-	margin-left: 300px;
-	padding-top: 20px;
-	font-size: 24px;
-}
-.vcb{
-	margin-left: 300px;
-	font-size: 24px;	
 }
 .qwe2{
-	margin-top: -25px;
 	border: 1px solid black;
-	height:150px;
+	margin-top:80px;
+	font-size: 16px;
+	height:180px;
 	width: 400px;
-	float: left;
-	margin-left: 250px;
+	margin-left: 100px;
 	border-radius: 5px;
 }
-#lop{
-	width: 400px;
-	height: 50px;
-	padding-top: 140px;
-	margin-left: 250px;
-}
-#lop h1{
-	margin-top: -10px;
-}
 .lkj{
-	height: 60px;
-	width: 80px;
-	
+	margin-top: 350px;
+	margin-left: 460px;
+	font-size: 24px;
 }
