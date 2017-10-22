@@ -1,0 +1,143 @@
+/*线控样式表*/
+
+/*矩形*/
+
+.rectangle{
+    margin:0 auto;
+    width:200px;
+    height:100px;
+    background: gray;
+}
+
+
+
+.capsuleBody{
+    border:5px;
+    border-color:black;
+    margin:0 auto;
+    width:100%;
+    padding-bottom: 20%;
+    background: lightgrey;
+    border-top-left-radius: 130px;
+    border-bottom-left-radius: 130px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+
+
+}
+
+.capsuleInnerBody{
+    border:5px;
+    border-color:black;
+    margin-left:5%;
+    width:70%;
+    float:left;
+    background:whitesmoke;
+    border-top-left-radius: 130px;
+    border-bottom-left-radius: 130px;
+    border-top-right-radius: 120px;
+    border-bottom-right-radius: 120px;
+
+}
+.capsuleMiddle{
+
+    
+
+}
+.displayInner{
+    border:5px;
+    border-color:black;
+    margin: 0 auto;
+    width:65%;
+    padding-bottom: 20%;
+    background:grey;
+    float:left;
+
+}
+
+.fontModeSelect{
+    width:20%;
+    margin-left:5%;
+    margin-top:5%;
+    margin-bottom:10%;
+    font-size: x-small;
+    float: left;
+    text-align: center;
+    background-color:lightcyan
+}
+.fontLogo{
+    width:50%;
+    padding-bottom:3%;
+    float:left;
+    font-weight: bold;
+    font-size: x-small;
+}
+.albumMode{
+    width:50%;
+    font-size: x-small;    
+}
+.fontFuncSelect{
+    width:20%;
+    float:left;
+    font-size: xx-small;
+    font-weight: bold;
+   
+}
+
+.capsuleControl{
+    margin-left:1%;
+    width:20%;
+    
+    background-color:whitesmoke;
+    float:left;
+    border-radius: 100px;
+}
+
+.capsuleControlInnerCircle{
+    
+    width:10%;
+    padding-bottom:10%;
+    background-color:grey;
+    
+    border-radius: 100px;
+}
+.canvasContainer{
+
+    width:100%;
+    
+}
+
+.lastSong{
+    margin-top:30%;
+    font-size: xx-large;
+    width:20%;
+    padding-bottom: 5%;
+    float: left;
+    font-style: bold;
+    
+}
+.nextSong{
+    margin-top:30%;
+    font-size: xx-large;
+    width:20%;
+    padding-bottom: 5%;
+    float: left;
+    
+}
+.volumeUp{
+    font-size: xx-large;
+    margin-left: 10%;
+    width:20%;
+    padding-bottom: 10%;
+    float: left;
+    
+}
+.volumeDown{
+    font-size: xx-large;
+    margin-top:60%;
+    
+    width:20%;
+    padding-bottom: 10%;
+    float:left;
+    
+}
