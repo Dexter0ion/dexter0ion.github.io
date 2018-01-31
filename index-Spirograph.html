@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/controller.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="./canvasTuto.css">
+    <title>Canvas & CSS</title>
+</head>
+
+<body>
+    <canvas id="Spirograph-three" width="2000" height="2000"></canvas>
+
+
+    <div class="capsuleBody">
+
+        <div class="capsuleInnerBody">
+
+            <div class="fontModeSelect">
+
+                <dl>
+                    <dd>S-XBS</dd>
+                    <dd>TRAIN</dd>
+                    <dd>LIVE</dd>
+                </dl>
+
+            </div>
+            <div class="capsuleMiddle">
+                <div class="albumMode">ALBUM MODE</div>
+                <div class="displayInner">
+                    <div></div>
+                </div>
+                <div class="fontLogo">Panasonic</div>
+                <div class="fontFuncSelect">EQ MODE ·MEMO/-DISP</div>
+            </div>
+        </div>
+        <div class="capsuleControl">
+            <div class="lastSong">《</div>
+            <div class="volumeUp">+</div>
+            <div class="volumeDown">-</div>
+            <div class="nextSong">》</div>
+
+        </div>
+    </div>
+
+    <div class="discContainer">
+        <div class="discContainnerInner">
+                <div class="fontDiscLogo">CT800</div>
+        </div>
+
+        
+    </div>
+
+
+    <h2>Canvas</h2>
+
+    <canvas id="cvCapsuleBody" style="height:100%;width:100%;margin:0 auto;"></canvas>
+
+    <canvas id="tuto1" width="150" height="150"></canvas>
+    <canvas id="colorRect" width="150" heigh="150"></canvas>
+    <canvas id="colorCircle" width="150" height="150"></canvas>
+    <hr>
+    <canvas id="binaryTree" width="500" height="500"></canvas>
+    <hr>
+    <canvas id="metroBeta" width="500" height="500"></canvas>
+    <hr>
+    <canvas id="metroAlpha" width="500" height="500"></canvas> 
+    <hr>
+    
+    <script type="text/javascript" src="./canvasTuto.js"></script>
+    <script type="text/javascript" src="./Spirograph-three.js"></script>
+    <hr>
+</body>
+<script type="text/javascript">
+    var c = document.getElementById("cvCapsuleBody");
+    var cxt = c.getContext("2d");
+    cxt.fillStyle = "lightGREY"
+    cxt.fillRect(0, 0, 1000, 100);
+</script>
+
+</html>
